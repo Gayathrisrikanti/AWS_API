@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Client.Models.JobSeeker>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="wrap-section">
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeekerId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeekerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeekerEmail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeekerMajor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Skill)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeekerCity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeekerCountry)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeekerId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeekerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeekerEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeekerMajor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Skill)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeekerCity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SeekerCountry)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.SeekerId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.SeekerId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.SeekerId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

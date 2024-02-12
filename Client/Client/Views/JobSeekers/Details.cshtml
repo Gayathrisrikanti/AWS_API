@@ -1,0 +1,56 @@
+﻿@model Client.Models.JobSeeker
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="wrap-section">
+    <h1>Details</h1>
+
+    <div>
+        <h4>JobSeeker</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SeekerName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SeekerName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SeekerEmail)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SeekerEmail)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SeekerMajor)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SeekerMajor)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Skill)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Skill)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SeekerCity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SeekerCity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SeekerCountry)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SeekerCountry)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.SeekerId">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>

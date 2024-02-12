@@ -1,0 +1,61 @@
+﻿@model Client.Models.JobSeeker
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="wrap-section">
+    <h1>Edit</h1>
+
+    <h4>JobSeeker</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="SeekerId" />
+                <div class="form-group">
+                    <label asp-for="SeekerName" class="control-label"></label>
+                    <input asp-for="SeekerName" class="form-control" />
+                    <span asp-validation-for="SeekerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SeekerEmail" class="control-label"></label>
+                    <input asp-for="SeekerEmail" class="form-control" />
+                    <span asp-validation-for="SeekerEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SeekerMajor" class="control-label"></label>
+                    <input asp-for="SeekerMajor" class="form-control" />
+                    <span asp-validation-for="SeekerMajor" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Skill" class="control-label"></label>
+                    <input asp-for="Skill" class="form-control" />
+                    <span asp-validation-for="Skill" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SeekerCity" class="control-label"></label>
+                    <input asp-for="SeekerCity" class="form-control" />
+                    <span asp-validation-for="SeekerCity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SeekerCountry" class="control-label"></label>
+                    <input asp-for="SeekerCountry" class="form-control" />
+                    <span asp-validation-for="SeekerCountry" class="text-danger"></span>
+                </div>
+                <div class="form-group btn-center">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</div>
